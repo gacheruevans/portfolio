@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
-import './Work.scss';
+import './work.scss';
 
 const Work = () => {
   const [activeFilter, setactiveFilter] = useState('All');

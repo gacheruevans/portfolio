@@ -4,7 +4,7 @@ import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
-import './Testimonial.scss';
+import './testimonial.scss';
 
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

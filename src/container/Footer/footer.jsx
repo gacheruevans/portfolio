@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
-import './Footer.scss';
+import './footer.scss';
 
 const Footer = () => {
   const [formData, setformData] = useState({name:'', email:'', message:''});
