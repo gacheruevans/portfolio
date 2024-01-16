@@ -69,11 +69,13 @@
     .tag-cmp {
         flex-direction: column;
         margin-top: 3rem;
-
+        background-color: var(--black-color);
+        
         p {
             width: 100%;
             text-transform: uppercase;
-            text-align: right;
+            text-align: center;
+            color:var(--white-color);
         }
     }
 
