@@ -3,6 +3,7 @@
 import email from '../assets/email.png';
 import mobile from '../assets/mobile.png';
 import api from '../assets/api.png';
+import aws from '../assets/aws.png';
 import cpp from '../assets/cpp.png';
 import css from '../assets/css.png';
 import figma from '../assets/figma.png';
@@ -43,6 +44,7 @@ export default {
   email,
   mobile,
   api,
+  aws,
   cpp,
   css,
   figma,
