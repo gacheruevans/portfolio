@@ -14,11 +14,11 @@ export default {
             type: 'string',
         },
         {
-            name: 'imageUrl',
-            title: 'Image',
+            name:'imgUrl',
+            title:'ImgUrl',
             type: 'image',
             options: {
-                hotspot: true,
+              hotspot: true,
             },
         },
         {

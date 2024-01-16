@@ -1,3 +1,5 @@
+/* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
+
 import email from '../assets/email.png';
 import mobile from '../assets/mobile.png';
 import api from '../assets/api.png';

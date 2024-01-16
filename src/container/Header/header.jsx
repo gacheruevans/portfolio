@@ -19,7 +19,7 @@ const scaleVariants = {
 const Header = () => (
   <div className="app__header app__flex">
     <motion.div
-      whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+      whileInView={{ x: [-500, 0], opacity: [0, 1] }}
       transition={{ duration: 0.5 }}
       className="app__header-info"
     >
@@ -33,8 +33,8 @@ const Header = () => (
         </div>
 
         <div className="tag-cmp app__flex">
-          <p className="p-text">Sr. Software Engineer</p>
-          <p className="p-text">Consultant</p>
+          <p className="p-text">Sr Software Engineer</p>
+          <p className="p-text">Contractor | Freelancer</p>
         </div>
       </div>
     </motion.div>
@@ -59,7 +59,7 @@ const Header = () => (
       whileInView={scaleVariants.whileInView}
       className="app__header-circles"
     >
-      {[images.postgres, images.mongodb, images.react, images.node, images.python, images.redux].map((circle, index) => (
+      {[images.flutter, images.redux, images.sass].map((circle, index) => (
         <div className="circle-cmp app__flex" key={`circle-${index}`}>
           <img src={circle} alt="profile_bg" />
         </div>
