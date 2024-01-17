@@ -23,10 +23,10 @@ const Skills = () => {
     });
 
   }, [])
-
+  console.log(experience)
   return (
     <>
-      <h2 className="head-text"> Skills & Experience</h2>
+      <h2 className="head-text"> Skills & <span>Experience</span></h2>
       <div className="app__skills-container">
         <motion.div
           className="app__skills-list"
@@ -49,32 +49,35 @@ const Skills = () => {
           {experience?.map((experience)=> (
           <motion.div
             className="app__skills-exp-item"
-            key={experience.year}
+            key={experience.company}
           >
-            <div className="app__skills-exp-year">
-              <p className="bold-text">{experience.year}</p>
-            </div>
             <motion.div className="app__skills-exp-works">
-              {experience.works.map((work) => (
+              {experience.work.map((work) => (
                 <>
                   <motion.div
                     whileInView={{opacity: [0 ,1]}}
                     transition={{duration: 0.5}}
                     className="app__skills-exp-work"
                     data-tip
-                    data-for={work.name}
-                    key={work.name}
+                    data-for={work.role}
+                    key={work.role}
                   >
-                    <h4 className="bold-text">{work.name}</h4>
-                    <h2 className="p-text">{work.company}</h2>
+                    <div className="app__skills-exp-year">
+                      <p className="bold-text">{experience.company}</p>
+                    </div>
+                    <h3 className="bold-text">{work.role}</h3>
+                    <h4 className="bold-text-years"><span>{work.startyear} - {work.endyear}</span></h4>
+                    <p className="p-text-desc">{work.desc}</p>
                   </motion.div>
                   <ReactTooltip
-                      id={work.name}
+                      id={work.role}
                       effect="solid"
                       arrowColor='#fff'
                       className="skills-tooltip"
                   >
-                    <p className="p-text">{work.desc}</p>
+                    <p className="p-text">
+                      {work.skills.map((skill) => skill)}
+                    </p>
                   </ReactTooltip>
                 </>
               ))}

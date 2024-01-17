@@ -88,13 +88,40 @@
   color: var(--black-color);
   text-align: left;
   margin-left: 25px;
-
+  
   @media screen and (min-width: 2000px) {
     font-size: 2rem;
   }
 
   @media screen and (max-width: 450px) {
     font-size: 0.9rem;
+  }
+}
+
+.bold-text-years { 
+  font-size: 1rem;
+  color: var(--gray-color);
+  text-align: left;
+  margin-left: 25px;
+  
+  @media screen and (min-width: 2000px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 0.9rem;
+  }
+}
+
+.p-text-desc {
+  font-size: 1rem;
+  text-align: left;
+  color: var(--gray-color);
+  line-height: 1.5;
+  margin-left: 25px;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem;
   }
 }
 
