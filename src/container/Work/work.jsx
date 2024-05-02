@@ -36,12 +36,12 @@ const Work = () => {
   }
   return (
     <>
-     <h2 className="head-text"> My Creative <span> Portfolio</span> <span> Section </span></h2>
+     <h2 className="head-text"><span> Portfolio</span> <span> Section </span></h2>
      <div className="app_work-filter">
         {['ReactJs', 'UI/UX', 'DevOps', 'NextJs', 'Web3', 'Python', 'All'].map((item, index) => (
           <div 
             key={index} 
-            onClick={()=> handleWorkFilter(item)}
+            onClick={ () => handleWorkFilter(item)}
             className={`app__work-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}
           >
             {item}

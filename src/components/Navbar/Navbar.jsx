@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import './Navbar.scss';
 
 const Navbar = () => {
+  const [activeFilter, setactiveFilter] = useState('home');
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -14,8 +15,13 @@ const Navbar = () => {
       </div>
       <ul className='app__navbar-links'>
         {['home', 'about', 'work', 'skills','testimonial', 'contact'].map((item)=>(
-          <li className='app__flex p-text' key={`link-${item}`}>
-            <a href={`#${item}`}>{item}</a>
+          <li
+            onClick={() => setactiveFilter(item)} 
+            className={`app__flex p-text`} 
+            key={`link-${item}`}>
+            <a 
+              href={`#${item}`} 
+              className={`${activeFilter === item ? 'item-active' : ''}`}>{item}</a>
           </li>
         ))}
       </ul>
@@ -31,8 +37,12 @@ const Navbar = () => {
               <HiX onClick={() => setToggle(false)} />
               <ul>
                 {['home', 'about', 'work', 'skills', 'testimonial', 'contact'].map((item)=>(
-                  <li key={item}>
-                    <a href={`#${item}`} onClick={() => setToggle(false)}>
+                  <li key={item} >
+                    <a 
+                      href={`#${item}`} 
+                      onClick={() => { setToggle(false); setactiveFilter(item); }}
+                      className={`${activeFilter === item ? 'item-active' : ''}`} 
+                      >
                       {item}
                     </a>
                   </li>

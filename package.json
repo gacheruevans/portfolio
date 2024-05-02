@@ -1,5 +1,6 @@
 {
   "name": "portfolio",
+  "homepage": "https://evansgacherumunene.co.ke",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,13 +13,14 @@
     "node-sass": "^8.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
+    "react-icons": "^5.1.0",
     "react-scripts": "^5.0.1",
     "react-tooltip": "^4.2.21",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
+    "server": "cd sanity-server/ && npm run dev",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
