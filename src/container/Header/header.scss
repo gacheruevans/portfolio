@@ -77,6 +77,18 @@
             text-align: center;
             color:var(--white-color);
         }
+
+        a {
+            width: 100%;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            color:var(--white-color);
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 
     span {
