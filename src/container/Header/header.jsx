@@ -34,7 +34,7 @@ const Header = () => (
 
         <div className="tag-cmp app__flex">
           <p className="p-text">Sr. Software Engineer</p>
-          <p className="p-text"> <a href='https://adplist.org/' target='_blank'>Mentor</a> | <a href='https://medium.com/@GacheruEvans' target='_blank'>Writer</a> | <a href='https://www.linkedin.com/in/evansgacheru/' target='_blank'>Contractor</a> </p>
+          <p className="p-text"> <a href='https://adplist.org/mentors/evans-gacheru-munene' target='_blank' rel="noreferrer">Mentor</a> | <a href='https://medium.com/@GacheruEvans' target='_blank' rel="noreferrer">Writer</a> | <a href='https://www.linkedin.com/in/evansgacheru/' target='_blank' rel="noreferrer">Contractor</a> </p>
         </div>
       </div>
     </motion.div>
