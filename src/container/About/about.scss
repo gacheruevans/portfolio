@@ -5,6 +5,29 @@
     flex-direction: column;
 }
 
+.app_about-description {
+    display: flex;
+    flex-wrap: wrap;
+    width:65%;
+
+    .p-text {
+        padding-top: 2rem;
+        font-size: 0.9rem;
+        text-align: left;
+        color: var(--gray-color);
+        line-height: 1.5;
+
+        @media screen and (min-width: 2000px) {
+            font-size: 1.75rem;
+        }
+    }
+
+    span {
+        color: var(--secondary-color);
+        font-weight: bold;
+    }
+}
+
 .app__profiles {
     display: flex;
     justify-content: center;

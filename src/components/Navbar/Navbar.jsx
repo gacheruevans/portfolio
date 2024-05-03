@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className='app__navbar'>
       <div className='app__navbar-logo'>
-        <p className="bold-text">EGM</p>
+        <p className="bold-text"><span>E</span>G<span>M</span></p>
       </div>
       <ul className='app__navbar-links'>
         {['home', 'about', 'projects', 'experience','testimonial', 'contact'].map((item)=>(
