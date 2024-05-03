@@ -28,18 +28,18 @@ const Testimonial = () => {
     });
   }, [])
 
-  const test = testimonials[currentIndex];
+  const partner = testimonials[currentIndex];
   return (
     <>
       {testimonials.length && (
         <>
           <div className="app__testimonial-item app__flex">
-            <img src={urlFor(test.imgUrl)} alt={test.name} />
+            <img src={urlFor(partner.imgUrl)} alt={partner.name} />
             <div className="app__testimonial-content">
-              <p className="p-text">{test.feedback}</p>
+              <p className="p-text">" {partner.feedback} "</p>
               <div>
-                <h4 className="bold-text">{test.name}</h4>
-                <h5 className="p-text">{test.company}</h5>
+                <h4 className="bold-Pname">{partner.name}</h4>
+                <h5 className="p-text">{partner.company}</h5>
               </div>
             </div>
           </div>
