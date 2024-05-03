@@ -117,10 +117,15 @@
             font-weight: 400;
         }
 
-        p {
-            font-weight: 400;
+        .p-text-desc{
+            font-size: 0.8rem;
+            text-align: left;
             color: var(--gray-color);
-            margin-top: 5px;
+            line-height: 1.5;
+
+            @media screen and (min-width: 2000px) {
+                font-size: 1.75rem;
+            }
         }
     }
 }

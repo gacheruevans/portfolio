@@ -26,7 +26,6 @@ const Skills = () => {
   
   return (
     <>
-      <h2 className="head-text"> Skills & <span>Experience</span></h2>
       <div className="app__skills-container">
         <motion.div
           className="app__skills-list"
@@ -49,7 +48,7 @@ const Skills = () => {
           {experience?.map((experience)=> (
           <motion.div
             className="app__skills-exp-item"
-            key={experience.company}
+            key={experience.company+experience.endyear}
           >
             <motion.div className="app__skills-exp-works">
               {experience.work.map((work) => (
@@ -92,6 +91,6 @@ const Skills = () => {
 
 export default AppWrap(
   MotionWrap(Skills, 'app__skills'),
-  'skills',
+  'experience',
   'app__whitebg'
 );
