@@ -11,10 +11,10 @@ const Navbar = () => {
   return (
     <nav className='app__navbar'>
       <div className='app__navbar-logo'>
-        <p className="bold-text">EGM</p>
+        <p className="bold-text"><span>E</span>G<span>M</span></p>
       </div>
       <ul className='app__navbar-links'>
-        {['home', 'about', 'work', 'skills','testimonial', 'contact'].map((item)=>(
+        {['home', 'about', 'projects', 'experience','testimonial', 'contact'].map((item)=>(
           <li
             onClick={() => setactiveFilter(item)} 
             className={`app__flex p-text`} 
@@ -36,7 +36,7 @@ const Navbar = () => {
             >
               <HiX onClick={() => setToggle(false)} />
               <ul>
-                {['home', 'about', 'work', 'skills', 'testimonial', 'contact'].map((item)=>(
+                {['home', 'about', 'projects', 'experience', 'testimonial', 'contact'].map((item)=>(
                   <li key={item} >
                     <a 
                       href={`#${item}`} 

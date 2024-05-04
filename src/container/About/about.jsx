@@ -18,8 +18,13 @@ const About = () => {
 
   return (
     <>
-      <h2 className="head-text"> <span> Good Apps</span> <br /> means <span>Good Business</span></h2>
-
+      <div className='app_about-description'>
+        <p className='p-text'>
+          I am a seasoned senior software engineer with over <span>11+ years</span> of impactful contributions to tech-focused organizations.
+          My journey includes impactful contributions to prominent companies such as Andela, Membio, Foursquare, Invision, and SettleMint, where I consistently developed, maintained and improved innovative software solutions 
+          across diverse technologies in both <span>Backend</span> and <span>Frontend</span> stacks while collaborating seamlessly with cross-functional teams.
+        </p>
+      </div>
       <div className="app__profiles">
         {abouts.map((about, index) => (
           <motion.div

@@ -59,6 +59,31 @@
         font-family: var(--font-base);
     }
 
+    .p-text {
+        font-size: 0.8rem;
+        text-align: left;
+        color: var(--gray-color);
+        line-height: 1.5;
+
+        @media screen and (min-width: 2000px) {
+            font-size: 1.75rem;
+        }
+    }
+
+    .bold-Pname{
+        font-size: 1.5rem;
+        font-weight: 800;
+        
+        
+        @media screen and (min-width: 2000px) {
+            font-size: 2rem;
+        }
+
+        @media screen and (max-width: 450px) {
+            font-size: 0.9rem;
+        }
+    }
+
     h4 {
         font-weight: 600;
         color: var(--secondary-color);
