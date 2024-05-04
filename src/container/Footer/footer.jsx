@@ -3,11 +3,13 @@ import React, { useState } from 'react';
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
+import { RecaptchaEnterpriseServiceClient } from '@google-cloud/recaptcha-enterprise';
 import './footer.scss';
 
 const Footer = () => {
   const [formData, setformData] = useState({name:'', email:'', message:''});
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [isValidated, setIsValidated] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const {name, email, message } = formData;
@@ -15,7 +17,7 @@ const Footer = () => {
     const {name, value } = e.target;
 
     setformData({ ...formData, [name]: value });
-  } 
+  }; 
   const handleSubmit = () => {
     setLoading(true);
 
@@ -33,6 +35,12 @@ const Footer = () => {
     })
     .catch((err) => console.log(err));
   };
+  const client = new RecaptchaEnterpriseServiceClient();
+  const handleGcaptcha = (e) => {
+    e.preventDefault();
+
+
+  }
   return (
    <>
     <h2 className="head-text"> Take a coffe & <span>chat with me</span></h2>
@@ -63,7 +71,19 @@ const Footer = () => {
             name="message"
             onChange={handleChangeInput}></textarea>
         </div>
-        <button type="button" className="p-text" onClick={handleSubmit}>{loading ? 'Sending Message...' : 'Sending Message'}</button>
+        { !isValidated ? 
+          (
+              <button className="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit' onClick={handleGcaptcha}>
+                Submit
+              </button>
+            )
+          :
+          (
+            <button type="button" className="p-text" onClick={handleSubmit}>
+              {loading ? 'Sending Message...' : 'Sending Message'}
+            </button>
+          )
+        }
       </div>
       ) : (
       <div>
