@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
-import { RecaptchaEnterpriseServiceClient } from '@google-cloud/recaptcha-enterprise';
+// import { createAssessment } from '../../utils/recaptcha.js'
 import './footer.scss';
 
 const Footer = () => {
@@ -11,6 +11,7 @@ const Footer = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [isValidated, setIsValidated] = useState(false);
   const [loading, setLoading] = useState(false);
+  const reCAPTCHA_site_key = process.env.RECAPTCHA_SITE_KEY;
 
   const {name, email, message } = formData;
   const handleChangeInput = (e) => {
@@ -35,12 +36,13 @@ const Footer = () => {
     })
     .catch((err) => console.log(err));
   };
-  const client = new RecaptchaEnterpriseServiceClient();
+
   const handleGcaptcha = (e) => {
     e.preventDefault();
+    // const result = createAssessment();
+    // setIsValidated(result);
+  };
 
-
-  }
   return (
    <>
     <h2 className="head-text"> Take a coffe & <span>chat with me</span></h2>
@@ -73,7 +75,7 @@ const Footer = () => {
         </div>
         { !isValidated ? 
           (
-              <button className="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit' onClick={handleGcaptcha}>
+              <button className="g-recaptcha" data-sitekey={reCAPTCHA_site_key} data-callback='onSubmit' data-action='submit' onClick={handleGcaptcha}>
                 Submit
               </button>
             )
