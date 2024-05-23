@@ -54,7 +54,8 @@
 }
 
 .app__skills-item {
-    flex-direction: column;
+    flex: 1;
+    flex-direction: inline;
     text-align: center;
 
     margin: 1rem;
@@ -62,12 +63,14 @@
     transition: all 0.3s ease-in-out;
 
     div {
+       
         width: 90px;
         height: 90px;
         border-radius: 50%;
         background-color: #fff;
 
         img {
+            margin: 1rem;
             width: 50%;
             height: 50%;
         }
@@ -88,8 +91,10 @@
     }
 
     p {
+        text-align: center;
         font-weight: 500;
         margin-top: 0.5rem;
+        
     }
 
     @media screen and (min-width: 2000px) {

@@ -28,11 +28,7 @@ export default {
             title: 'Skills',
             type:'array',
             of: [
-                {
-                    name:'stack',
-                    title:'Stack',
-                    type:'string'
-                }
+                { type:'skills'}
             ]
         }
     ]
