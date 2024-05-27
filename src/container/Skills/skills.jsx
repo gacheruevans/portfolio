@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import ReactTooltip from 'react-tooltip';
+// import ReactTooltip from 'react-tooltip';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor,client } from '../../client';
@@ -22,7 +22,12 @@ const Skills = () => {
   return (
     <>
       <div className="app__skills-resume">
-        <a href='https://evansgacherumunene.co.ke/resume.pdf' className="app__skills-downloadbtn" attributes-list download ="resume.pdf" target="_blank" rel="noreferrer">Download Resume</a>
+        <a 
+          href='https://evansgacherumunene.co.ke/resume.pdf' 
+          className="app__skills-downloadbtn" 
+          attributes-list download ="resume.pdf" 
+          target="_blank" 
+          rel="noreferrer" >Download Resume</a>
       </div>
       <div className="app__skills-container">
         <motion.div className="app__skills-exp">
@@ -47,11 +52,14 @@ const Skills = () => {
                       <p className="bold-text">{experience.company}</p>
                     </div>
                     <h3 className="bold-text">{work.role}</h3>
-                    <h4 className="bold-text-years"><span>{work.startyear} - {work.endyear}</span></h4>
-                    <p className="p-text-desc">{work.desc}</p>
-                     <motion.div
+                    <h4 className="bold-text-years"><span>{work.startyear} - {work.endyear}</span></h4>  
+                    {
+                      work.desc.split('. ').map((line) =>  <p className="p-text-desc"> - {line}</p>)
+                    }
+                    <motion.div
                       className="app__skills-list"
                     >
+                      <h4 className='className="p-text-desc'>Technical Stack </h4>
                       <motion.div
                         whileInView={{opacity: [0,1]}}
                         transition={{duration: 0.5}}
