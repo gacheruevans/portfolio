@@ -9,7 +9,7 @@ import './skills.scss';
 
 const Skills = () => {
   const [experience, setExperience] = useState([]);
-
+  const d = new Date();
   useEffect(() => {
     const query = `*[_type == "experiences"]`;
 
@@ -52,14 +52,13 @@ const Skills = () => {
                       <p className="bold-text">{experience.company}</p>
                     </div>
                     <h3 className="bold-text">{work.role}</h3>
-                    <h4 className="bold-text-years"><span>{work.startyear} - {work.endyear}</span></h4>  
+                    <h4 className="bold-text-years"><span>{work.startyear} - {d.getFullYear() == work.endyear ? 'Present': work.endyear}</span></h4>  
                     {
                       work.desc.split('. ').map((line) =>  <p className="p-text-desc"> - {line}</p>)
                     }
                     <motion.div
                       className="app__skills-list"
                     >
-                      <h4 className='className="p-text-desc'>Technical Stack </h4>
                       <motion.div
                         whileInView={{opacity: [0,1]}}
                         transition={{duration: 0.5}}
