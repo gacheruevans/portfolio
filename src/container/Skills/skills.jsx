@@ -52,7 +52,7 @@ const Skills = () => {
                       <p className="bold-text">{experience.company}</p>
                     </div>
                     <h3 className="bold-text">{work.role}</h3>
-                    <h4 className="bold-text-years"><span>{work.startyear} - {d.getFullYear() == work.endyear ? 'Present': work.endyear}</span></h4>  
+                    <h4 className="bold-text-years"><span>{work.startyear} - {d.getFullYear() === work.endyear ? 'Present': work.endyear}</span></h4>  
                     {
                       work.desc.split('. ').map((line) =>  <p className="p-text-desc"> - {line}</p>)
                     }
