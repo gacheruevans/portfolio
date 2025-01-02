@@ -105,3 +105,6 @@ dist
 
 # Ds Store
 .DS_Store/
+
+# IDE's
+.vscode/
