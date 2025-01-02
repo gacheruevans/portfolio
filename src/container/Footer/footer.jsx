@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
+import  emailjs from '@emailjs/browser';
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
@@ -11,12 +12,23 @@ const Footer = () => {
   const [loading, setLoading] = useState(false);
 
   const {name, email, message } = formData;
+  const form = useRef();
   const handleChangeInput = (e) => {
     const {name, value } = e.target;
 
     setformData({ ...formData, [name]: value });
   } 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_oi6qs8e', 'template_5lm61fo', form.current,{
+      publicKey: 'X5NI5OGzhOh1WjuuA'
+    })
+      .then(()=> {
+        console.log('Sent Email!')
+      },(error) => {
+      console.log('Failed sending email...', error.text);
+    });
+
     setLoading(true);
 
     const contact = {
@@ -48,7 +60,7 @@ const Footer = () => {
     </div>
     
     {!isFormSubmitted ? (
-      <div className="app__footer-form app_flex">
+      <form ref={form} className="app__footer-form app_flex">
         <div className="app__flex">
           <input className="p-text" placeholder="Your name" name="name" value={name} onChange={handleChangeInput}></input>
         </div>
@@ -63,8 +75,9 @@ const Footer = () => {
             name="message"
             onChange={handleChangeInput}></textarea>
         </div>
-        <button type="button" className="p-text" onClick={handleSubmit}>{loading ? 'Sending Message...' : 'Sending Message'}</button>
-      </div>
+        <button type="button" className="p-text" onClick={handleSubmit}>{loading ? 'Sending Message...' : 'Send Message'}</button>
+      </form>
+        
       ) : (
       <div>
         <h3 className="head-text"> Thank you for getting in touch!</h3>

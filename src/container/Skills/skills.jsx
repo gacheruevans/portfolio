@@ -23,7 +23,8 @@ const Skills = () => {
     <>
       <div className="app__skills-resume">
         <a 
-          href='https://evansgacherumunene.co.ke/resume.pdf' 
+          hidden
+          href='https://gacheruevans.github.io/portfolio/resume.pdf' 
           className="app__skills-downloadbtn" 
           attributes-list download ="resume.pdf" 
           target="_blank" 

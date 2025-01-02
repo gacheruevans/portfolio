@@ -20,7 +20,7 @@ const About = () => {
     <>
       <div className='app_about-description'>
         <p className='p-text'>
-          I am a seasoned senior software engineer with over <span>11+ years</span> of impactful contributions to tech-focused organizations.
+          I am a seasoned senior software engineer with over <span> 10+ years</span> of impactful contributions in tech-focused organizations.
           My journey includes impactful contributions to prominent companies such as Andela, Membio, Foursquare, Invision, and SettleMint, where I consistently developed, maintained and improved innovative software solutions 
           across diverse technologies in both <span>Backend</span> and <span>Frontend</span> stacks while collaborating seamlessly with cross-functional teams.
         </p>
